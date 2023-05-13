@@ -1,8 +1,6 @@
 import discord
-from os import environ
 from Bard import Chatbot
 
-token = environ.get("BARD_TOKEN")
 with open("bis.txt", "r") as f:
     TOKEN = f.readline().strip()
 
