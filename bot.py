@@ -9,14 +9,16 @@ with open("tris.txt", "r") as f:
 
 client = discord.Client(intents=discord.Intents.all())
 
+chatbot = Chatbot(token)
+
 @client.event
 async def on_ready():
     print("Bot is online!")
 
 @client.event
 async def on_message(message):
-    if message.content == "ping":
-        await message.channel.send(f"Pong! {message.author.display_name}")
+    resp=chatbot.ask(message)
+    message.channel.reply(resp)
 
 # Run the bot
 client.run(TOKEN)
