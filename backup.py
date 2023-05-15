@@ -1,13 +1,12 @@
-import discord 
-import os
+import discord
 from discord.ext import commands
 from Bard import Chatbot
-from dotenv import load_dotenv
-load_dotenv()
 
-TOKEN = os.environ['bis']
+with open("bis.txt", "r") as f:
+    TOKEN = f.readline().strip()
 
-token = os.environ['tris']
+with open("tris.txt", "r") as f:
+    token = f.readline().strip()
 
 client = commands.Bot(intents=discord.Intents.all(), command_prefix="!")
 
