@@ -1,0 +1,6 @@
+discord.py
+python-dotenv
+GoogleBard
+Bard
+tornado==4.5.3
+nest-asyncio
