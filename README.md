@@ -1,2 +1,2 @@
 # Baniyan
- AI bot
+ AI bot for Discord
